@@ -4,14 +4,14 @@ const Login = () => {
 
   const InputChangeHandler = (event) => {
     const inputValue = event.target.value;
-    if (inputValue.includes("o")) {
+    if (inputValue.includes("o") || inputValue.includes("O")) {
       alert("Por favor, ¡Nombres de usuario sin la letra o!");
     }
     setUser(inputValue);
   };
 
   const RegisterHandler = () => {
-    if (user.trim() === "" || user.toLowerCase().includes("o")) {
+    if (user.trim() === "" || user.includes("o") || user.includes("O")) {
       alert("Usuario inválido para la registración");
     } else {
       alert("Usuario registrado correctamente");
