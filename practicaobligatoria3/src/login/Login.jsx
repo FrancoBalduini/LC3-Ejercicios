@@ -8,11 +8,9 @@ const Login = () => {
       alert("Por favor, ¡Nombres de usuario sin la letra o!");
     }
     setUser(inputValue);
-    console.log(inputValue);
   };
 
   const RegisterHandler = () => {
-    console.log(user);
     if (user.trim() === "" || user.toLowerCase().includes("o")) {
       alert("Usuario inválido para la registración");
     } else {
